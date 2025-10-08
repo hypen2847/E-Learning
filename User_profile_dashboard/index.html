@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Profile - NCC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <span class="brand-text">User Profile</span>
+        </div>
+        <nav class="side-nav" aria-label="Profile Navigation">
+            <a href="#profile" class="nav-item active"><span>Profile</span></a>
+            <a href="#enrollments" class="nav-item"><span>My Enrollments</span></a>
+            <a href="#settings" class="nav-item"><span>Settings</span></a>
+            <div class="nav-indicator" aria-hidden="true"></div>
+        </nav>
+        <div class="side-footer">
+            <a class="btn btn-ghost" href="../index.html">← Back to Site</a>
+        </div>
+    </aside>
+
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="search">
+                <input id="searchBox" type="search" placeholder="Search enrollments...">
+            </div>
+            <div class="top-actions">
+                <button id="themeToggle" class="icon-btn" title="Toggle theme">🌓</button>
+                <div class="account">
+                    <div class="avatar" id="userAvatar">U</div>
+                    <div class="meta">
+                        <div id="userName">User</div>
+                        <small id="userEmail" class="muted">user@example.com</small>
+                    </div>
+                    <button class="btn btn-sm" id="logout">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section id="profile" class="panel">
+                <h2 class="panel-title reveal">My Profile</h2>
+                <div class="profile-grid">
+                    <div class="profile-card reveal">
+                        <div class="profile-header">
+                            <div class="profile-avatar" id="profileAvatar">U</div>
+                            <div class="profile-info">
+                                <h3 id="profileName">User Name</h3>
+                                <p id="profileEmail" class="muted">user@example.com</p>
+                                <p id="profileMobile" class="muted">+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="totalEnrollments">0</div>
+                                <div class="stat-label">Enrollments</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="activeCourses">0</div>
+                                <div class="stat-label">Active Courses</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="memberSince">0</div>
+                                <div class="stat-label">Days Member</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="loginCount">0</div>
+                                <div class="stat-label">Login Count</div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Last Login:</span>
+                                <span class="detail-value" id="lastLogin">Never</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Account Created:</span>
+                                <span class="detail-value" id="accountCreated">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions reveal">
+                        <h3>Quick Actions</h3>
+                        <div class="action-buttons">
+                            <button class="btn btn-ghost" id="editProfile">Edit Profile</button>
+                            <button class="btn btn-ghost" id="changePassword">Change Password</button>
+                            <button class="btn" id="newEnrollment">New Enrollment</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enrollments" class="panel">
+                <h2 class="panel-title reveal">My Enrollments</h2>
+                <div class="table-wrap reveal">
+                    <table class="data-table" id="userEnrollmentsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Course</th>
+                                <th>Enrollment Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="settings" class="panel">
+                <h2 class="panel-title reveal">Account Settings</h2>
+                <div class="settings-grid">
+                    <div class="setting-item reveal">
+                        <label class="switch">
+                            <input type="checkbox" id="emailNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <div>
+                            <div>Email Notifications</div>
+                            <small class="muted">Receive updates about your courses</small>
+                        </div>
+                    </div>
+                    <div class="setting-item reveal">
+                        <label class="switch">
+                            <input type="checkbox" id="smsNotifications">
+                            <span class="slider"></span>
+                        </label>
+                        <div>
+                            <div>SMS Notifications</div>
+                            <small class="muted">Receive SMS updates</small>
+                        </div>
+                    </div>
+                    <div class="setting-item reveal">
+                        <label class="switch">
+                            <input type="checkbox" id="motionToggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <div>
+                            <div>Animations</div>
+                            <small class="muted">Toggle page transitions and effects</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../database.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

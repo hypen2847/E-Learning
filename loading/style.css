@@ -1,0 +1,100 @@
+body {
+  background: radial-gradient(900px 600px at 120% -30%, rgba(124,92,255,0.22), transparent 60%),
+             radial-gradient(700px 500px at -20% -20%, rgba(0,224,164,0.16), transparent 60%),
+             #0b0e14;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -75px;
+  width: 150px;
+  height: 80px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #e6e9ef;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: conic-gradient(from 180deg at 50% 50%, #7c5cff, #00e0a4, #ffb457, #7c5cff);
+  box-shadow: 0 8px 24px rgba(124,92,255,0.35), inset 0 0 12px rgba(0,0,0,0.4);
+  margin: 0 auto 20px;
+}
+
+.skype-loader {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.skype-loader .dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  animation: 1.7s dotrotate cubic-bezier(0.775, 0.005, 0.310, 1.000) infinite;
+}
+
+.skype-loader .dot:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.skype-loader .dot:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.skype-loader .dot:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.skype-loader .dot:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.skype-loader .dot:after, .skype-loader .dot .first {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #7c5cff;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.skype-loader .dot .first {
+  background: #00e0a4;
+  margin-top: -4px;
+  animation: 1.7s dotscale cubic-bezier(0.775, 0.005, 0.310, 1.000) infinite;
+  animation-delay: 0.2s;
+}
+
+#loadingText {
+  font-size: 14px;
+  color: #9aa4b2;
+  margin-top: 10px;
+}
+
+@keyframes dotrotate { 
+  from { transform: rotate(0deg); } 
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dotscale { 
+  0%, 10% { width: 16px; height: 16px; margin-left: -8px;  margin-top: -4px; } 
+  50% { width: 8px; height: 8px; margin-left: -4px; margin-top: 0; }
+  90%, 100% { width: 16px; height: 16px;  margin-left: -8px;  margin-top: -4px; }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NCC Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <span class="brand-text">NCC Admin</span>
+        </div>
+        <nav class="side-nav" aria-label="Dashboard">
+            <a href="#overview" class="nav-item active"><span>Overview</span></a>
+            <a href="#enrollments" class="nav-item"><span>Enrollments</span></a>
+            <a href="#users" class="nav-item"><span>Users</span></a>
+            <a href="#schedule" class="nav-item"><span>Schedule</span></a>
+            <a href="#settings" class="nav-item"><span>Settings</span></a>
+            <div class="nav-indicator" aria-hidden="true"></div>
+        </nav>
+        <div class="side-footer">
+            <a class="btn btn-ghost" href="../index.html">← Back to Site</a>
+        </div>
+    </aside>
+
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="search">
+                <input id="searchBox" type="search" placeholder="Search…">
+            </div>
+            <div class="top-actions">
+                <button id="themeToggle" class="icon-btn" title="Toggle theme">🌓</button>
+                <div class="account">
+                    <div class="avatar" id="avatar">AD</div>
+                    <div class="meta">
+                        <div id="adminName">Admin</div>
+                        <small id="adminEmail" class="muted">admin@ncc</small>
+                    </div>
+                    <button class="btn btn-sm" id="logout">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section id="overview" class="panel">
+                <h2 class="panel-title reveal">Overview</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card tilt-card reveal">
+                        <div class="kpi-label">Total Enrollments</div>
+                        <div class="kpi-value" id="kpiEnrollments">0</div>
+                        <div class="kpi-trend" id="kpiEnrollmentsTrend">+0 this week</div>
+                    </div>
+                    <div class="kpi-card tilt-card reveal">
+                        <div class="kpi-label">Registered Users</div>
+                        <div class="kpi-value" id="kpiUsers">0</div>
+                        <div class="kpi-trend" id="kpiUsersTrend">+0 today</div>
+                    </div>
+                    <div class="kpi-card tilt-card reveal">
+                        <div class="kpi-label">Conversion</div>
+                        <div class="kpi-value" id="kpiConversion">0%</div>
+                        <div class="kpi-trend" id="kpiConversionTrend">steady</div>
+                    </div>
+                    <div class="kpi-card tilt-card reveal">
+                        <div class="kpi-label">Active Courses</div>
+                        <div class="kpi-value" id="kpiCourses">3</div>
+                        <div class="kpi-trend" id="kpiCoursesTrend">static</div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="panel-card reveal">
+                        <div class="panel-head">
+                            <h3>Enrollments — Last 14 days</h3>
+                            <div class="legend"><span class="dot dot-a"></span> Enrollments</div>
+                        </div>
+                        <canvas id="enrollChart" height="160"></canvas>
+                    </div>
+                    <div class="panel-card reveal">
+                        <div class="panel-head">
+                            <h3>Users — Last 14 days</h3>
+                            <div class="legend"><span class="dot dot-b"></span> Users</div>
+                        </div>
+                        <canvas id="usersChart" height="160"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enrollments" class="panel">
+                <h2 class="panel-title reveal">Recent Enrollments</h2>
+                <div class="table-wrap reveal">
+                    <table class="data-table" id="enrollTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Course</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="users" class="panel">
+                <h2 class="panel-title reveal">Registered Users</h2>
+                <div class="table-wrap reveal">
+                    <table class="data-table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Created</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="schedule" class="panel">
+                <h2 class="panel-title reveal">Schedule Snapshot</h2>
+                <div class="schedule-cards">
+                    <div class="schedule-card reflective tilt-card reveal">
+                        <div>Mon - Concept Mastery</div>
+                        <small class="muted">06:00 • 10:00 • 17:00</small>
+                    </div>
+                    <div class="schedule-card reflective tilt-card reveal">
+                        <div>Wed - Problem Solving</div>
+                        <small class="muted">08:00 • 14:00 • 20:00</small>
+                    </div>
+                    <div class="schedule-card reflective tilt-card reveal">
+                        <div>Sun - Mock + Analysis</div>
+                        <small class="muted">10:00 • 14:00</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="settings" class="panel">
+                <h2 class="panel-title reveal">Settings</h2>
+                <div class="settings-grid">
+                    <div class="setting-item reveal">
+                        <label class="switch">
+                            <input type="checkbox" id="motionToggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <div>
+                            <div>Animations</div>
+                            <small class="muted">Toggle page transitions and counters</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+   
+    <script src="../database.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+

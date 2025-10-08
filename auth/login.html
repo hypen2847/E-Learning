@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login • NCC</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="auth-shell">
+		<section class="auth-card reveal">
+			<div class="brand">
+				<div class="brand-mark" aria-hidden="true"></div>
+				<h1 class="brand-name">National Coaching Centre</h1>
+			</div>
+			<h2 class="title">Welcome back</h2>
+			<p class="subtitle">Login to continue to your dashboard</p>
+			<form id="loginPageForm" class="form" autocomplete="off">
+				<label for="loginEmail">Email</label>
+				<input id="loginEmail" type="email" placeholder="you@example.com" required>
+				<label for="loginPassword">Password</label>
+				<input id="loginPassword" type="password" placeholder="Your password" required>
+				<p id="loginPageError" class="form-message"></p>
+				<button id="loginPageBtn" class="btn" type="submit">
+					<span class="btn-text">Login</span>
+					<span class="btn-loading" hidden>⏳</span>
+				</button>
+			</form>
+			<div class="footer-actions">
+				<a href="./register.html">Create an account</a>
+				<a href="../index.html">Back to site</a>
+			</div>
+		</section>
+	</main>
+
+	<script src="../database.js" defer></script>
+	<script src="script.js" defer></script>
+</body>
+</html>

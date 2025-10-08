@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register • NCC</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="auth-shell">
+		<section class="auth-card reveal">
+			<div class="brand">
+				<div class="brand-mark" aria-hidden="true"></div>
+				<h1 class="brand-name">National Coaching Centre</h1>
+			</div>
+			<h2 class="title">Create your account</h2>
+			<p class="subtitle">Register to access your personalized dashboard</p>
+			<form id="registerPageForm" class="form" autocomplete="off">
+				<label for="regName">Full Name</label>
+				<input id="regName" type="text" placeholder="Your full name" required>
+				<label for="regEmail">Email</label>
+				<input id="regEmail" type="email" placeholder="you@example.com" required>
+				<label for="regMobile">Mobile</label>
+				<input id="regMobile" type="tel" placeholder="e.g. +91 98765 43210" required>
+				<label for="regPassword">Password</label>
+				<input id="regPassword" type="password" placeholder="Create a password" required>
+				<p id="registerPageError" class="form-message"></p>
+				<button id="registerPageBtn" class="btn" type="submit">
+					<span class="btn-text">Create account</span>
+					<span class="btn-loading" hidden>⏳</span>
+				</button>
+			</form>
+			<div class="footer-actions">
+				<a href="./login.html">Already have an account? Login</a>
+				<a href="../index.html">Back to site</a>
+			</div>
+		</section>
+	</main>
+
+	<script src="../database.js" defer></script>
+	<script src="script.js" defer></script>
+</body>
+</html>

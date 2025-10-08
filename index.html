@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edu Sphere</title>
+    <meta name="description" content="Premier country-level coaching centre. Expert mentors, curated courses, and a proven timetable for success.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a class="brand" href="#" aria-label="Homepage">
+                <span class="brand-icon" aria-hidden="true"></span>
+                <span class="brand-text">Edu Sphere</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
+            <nav id="primaryNav" class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#faculty" class="nav-link">Faculty</a></li>
+                    <li><a href="#testimonials" class="nav-link">Results</a></li>
+                    <li><a href="#enroll" class="btn btn-sm">Enroll</a></li>
+                    <li><a id="navRegister" class="icon-btn" href="./auth/register.html" title="Register">Register</a></li>
+                    <li><a id="navLogin" class="icon-btn" href="./auth/login.html" title="Login">Login</a></li>
+                    <li><button id="accountBtn" class="icon-btn hidden" title="Account">Account</button></li>
+                    <li><button id="openAdmin" class="icon-btn" title="Admin">⚙️</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-inner">
+                <h1 class="reveal">Master Computer Science<br>From Anywhere</h1>
+                <p class="lead reveal">Join thousands of students learning programming, web development, data science, and more with comprehensive online courses designed by industry experts.</p>
+                <div class="cta-group reveal">
+                    <a href="https://elearning-platform-mu.vercel.app" class="btn btn-lg">Start Your Journey</a>
+                    <a href="https://elearning-platform-mu.vercel.app/courses" class="btn btn-ghost btn-lg">Explore Courses</a>
+                </div>
+                <div class="stats reveal">
+                    <div class="stat">
+                        <div class="value">50,000+</div>
+                        <div class="label">Active Students</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value">200+</div>
+                        <div class="label">Expert Instructors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value">500+</div>
+                        <div class="label">Courses Available</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg" aria-hidden="true"></div>
+        </section>
+
+        <section id="why" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Why Choose Edu Sphere?</h2>
+                <p class="section-desc reveal">We provide the best learning experience with cutting-edge technology and expert instruction.</p>
+                <div class="features-grid">
+                    <article class="feature-card tilt-card reveal">
+                        <h3>Expert Content</h3>
+                        <p>Learn from instructors with real-world industry experience and proven track records.</p>
+                    </article>
+                    <article class="feature-card tilt-card reveal">
+                        <h3>Community Learning</h3>
+                        <p>Join a vibrant community, share knowledge, and grow together with peers.</p>
+                    </article>
+                    <article class="feature-card tilt-card reveal">
+                        <h3>Certificates</h3>
+                        <p>Earn recognized certificates upon completion to boost your career prospects.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">About Us</h2>
+                <p class="section-desc reveal">Edu Sphere empowers learners worldwide with quality education and expert instruction. Our mission is to make high-quality tech education accessible from anywhere.</p>
+                <h3 class="section-title reveal" style="font-size:20px; margin-top:16px;">Leadership</h3>
+                <div class="faculty-grid">
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">CE</div>
+                        <h3>Chief Executive Officer</h3>
+                        <p>Leads strategy and vision to deliver impactful, accessible learning.</p>
+                    </article>
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">CT</div>
+                        <h3>Chief Technology Officer</h3>
+                        <p>Drives platform innovation and learner-first experiences at scale.</p>
+                    </article>
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">HC</div>
+                        <h3>Head of Content</h3>
+                        <p>Oversees expert-led curricula, projects, and assessments.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Featured Courses</h2>
+                <p class="section-desc reveal">Discover our most popular courses designed to help you build in-demand skills.</p>
+                <div class="cards-grid">
+                    <article class="course-card tilt-card reflective reveal">
+                        <div class="course-badge">Programming</div>
+                        <h3>Complete DSA Using C++</h3>
+                        <p>Master data structures and algorithms with hands-on practice. 4.9 rating (12,500 students). Intro pricing available.</p>
+                        <div class="course-meta">
+                            <span>Self-paced</span>
+                            <span>Projects</span>
+                        </div>
+                    </article>
+                    <article class="course-card tilt-card reflective reveal">
+                        <div class="course-badge">Data Science</div>
+                        <h3>Python: Basic to Advanced</h3>
+                        <p>Covers Python fundamentals to advanced topics for DS/ML. 5.0 rating (8,900 students). Intro pricing available.</p>
+                        <div class="course-meta">
+                            <span>Self-paced</span>
+                            <span>Certificates</span>
+                        </div>
+                    </article>
+                    <article class="course-card tilt-card reflective reveal">
+                        <div class="course-badge">Web Development</div>
+                        <h3>Web Development Bootcamp</h3>
+                        <p>Front-end to back-end with modern frameworks. 4.8 rating (9,800 students). Intro pricing available.</p>
+                        <div class="course-meta">
+                            <span>Mentor Support</span>
+                            <span>Capstone</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="faculty" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Faculty</h2>
+                <div class="faculty-grid">
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">AK</div>
+                        <h3>Anita Kapoor</h3>
+                        <p>Physics lead mentor. 12+ years. Author and national olympiad coach.</p>
+                    </article>
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">RM</div>
+                        <h3>Rahul Mehta</h3>
+                        <p>Mathematics strategist. Known for high-yield problem frameworks.</p>
+                    </article>
+                    <article class="faculty-card reflective tilt-card reveal">
+                        <div class="avatar" aria-hidden="true">SP</div>
+                        <h3>Shreya Patel</h3>
+                        <p>Chemistry expert. Concept clarity with mnemonic-rich teaching.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Results & Stories</h2>
+                <div class="testimonial-row">
+                    <blockquote class="testimonial reveal">“I jumped 500+ ranks in 3 months. The timetable and mocks are gold.” — Aditi</blockquote>
+                    <blockquote class="testimonial reveal">“Mentors tracked my progress weekly. Genuine accountability.” — Rohan</blockquote>
+                    <blockquote class="testimonial reveal">“Concept-first approach helped me retain more and stress less.” — Meera</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="enroll" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Enroll Now</h2>
+                <p class="section-desc reveal">Submit your details. We will contact you with the best track. Your data is stored locally in JSON format with timestamp and compact mobile.</p>
+                <form id="enrollForm" class="enroll-form reveal" autocomplete="off">
+                    <div class="form-row">
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" name="fullName" type="text" required placeholder="Your name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-row">
+                        <label for="mobile">Mobile</label>
+                        <input id="mobile" name="mobile" type="tel" required placeholder="e.g. +91 98765 43210">
+                    </div>
+                    <div class="form-row">
+                        <label for="courseSelect">Course</label>
+                        <select id="courseSelect" name="course" required>
+                            <option value="">Select a course…</option>
+                            <option>All-India Foundation</option>
+                            <option>Rank Booster</option>
+                            <option>Crash Course</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-lg">Submit</button>
+                    </div>
+                    <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Edu Sphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <dialog id="loginDialog" class="modal">
+        <form method="dialog" id="loginForm" class="modal-card" autocomplete="off">
+            <h3>Admin Login</h3>
+            <p class="muted">Enter your admin credentials to access the dashboard</p>
+            <label for="adminEmail">Email</label>
+            <input id="adminEmail" type="email" required placeholder="admin@example.com">
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" type="password" required placeholder="Enter admin password">
+            <div class="modal-actions">
+                <button value="cancel" class="btn btn-ghost">Cancel</button>
+                <button id="loginSubmit" value="default" class="btn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-loading" hidden>⏳</span>
+                </button>
+            </div>
+            <p id="loginError" class="form-message"></p>
+        </form>
+    </dialog>
+
+    <dialog id="userRegisterDialog" class="modal">
+        <form method="dialog" id="userRegisterForm" class="modal-card" autocomplete="off">
+            <h3>Create Account</h3>
+            <label for="userName">Full Name</label>
+            <input id="userName" name="name" type="text" required placeholder="Your full name">
+            <label for="userEmail">Email</label>
+            <input id="userEmail" name="email" type="email" required placeholder="you@example.com">
+            <label for="userMobile">Mobile</label>
+            <input id="userMobile" name="mobile" type="tel" required placeholder="e.g. +91 98765 43210">
+            <label for="userPassword">Password</label>
+            <input id="userPassword" name="password" type="password" required placeholder="Create a password">
+            <div class="modal-actions">
+                <button value="cancel" class="btn btn-ghost">Cancel</button>
+                <button value="default" class="btn" id="registerBtn">
+                    <span class="btn-text">Register</span>
+                    <span class="btn-loading" hidden>⏳</span>
+                </button>
+            </div>
+            <p id="registerError" class="form-message"></p>
+        </form>
+    </dialog>
+
+    <dialog id="userLoginDialog" class="modal">
+        <form method="dialog" id="userLoginForm" class="modal-card" autocomplete="off">
+            <h3>Login</h3>
+            <label for="loginUserEmail">Email</label>
+            <input id="loginUserEmail" name="email" type="email" required placeholder="you@example.com">
+            <label for="loginUserPassword">Password</label>
+            <input id="loginUserPassword" name="password" type="password" required placeholder="Your password">
+            <div class="modal-actions">
+                <button value="cancel" class="btn btn-ghost">Cancel</button>
+                <button value="default" class="btn" id="userLoginBtn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-loading" hidden>⏳</span>
+                </button>
+            </div>
+            <p id="userLoginError" class="form-message"></p>
+        </form>
+    </dialog>
+
+    <dialog id="accountDialog" class="modal">
+        <form method="dialog" id="accountCard" class="modal-card" autocomplete="off">
+            <h3>Your Account</h3>
+            <p class="muted" id="accountMeta"></p>
+            <div class="modal-actions">
+                <button id="logoutBtn" value="default" class="btn">Logout</button>
+            </div>
+        </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="database.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="center">
+  <div class="brand-mark" aria-hidden="true"></div>
+  <div class="skype-loader">
+    <div class="dot">
+      <div class="first"></div>
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  <div id="loadingText">Loading...</div>
+</div>
+
+<script>
+// Get loading text from URL params
+const urlParams = new URLSearchParams(window.location.search);
+const action = urlParams.get('action') || 'loading';
+const loadingTexts = {
+  'login': 'Logging in...',
+  'register': 'Creating account...',
+  'admin': 'Authenticating...',
+  'loading': 'Loading...'
+};
+document.getElementById('loadingText').textContent = loadingTexts[action] || 'Loading...';
+
+// Simulate loading time and redirect
+setTimeout(() => {
+  const redirect = urlParams.get('redirect') || '../index.html';
+  window.location.href = redirect;
+}, 2000);
+</script>
+</body>
+</html>
